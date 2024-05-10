@@ -4,18 +4,19 @@ export const metadata = {
   title: 'QLU Robotics',
   description: 'QLU Robotics WebPage',
   icons: {
-    icon: '/icon.png',
+    icon: '/icon.ico',
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
+export default function RootLayout({ 
+  children,}: {
   children: React.ReactNode
 }) {
   return (
     <html lang="en">
-      <body><Header/>{children}</body>
+      
+      <body> <Header/>{children} </body>
+
     </html>
   )
 }
