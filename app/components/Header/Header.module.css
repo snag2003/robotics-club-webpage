@@ -1,5 +1,5 @@
-.Bar{
-  background-image: linear-gradient(to right,#3b3a3a, #1E2123, #000000);
+.Bar {
+  background-image: linear-gradient(to right, #3b3a3a, #1e2123, #000000);
   display: flex;
   flex-direction: row;
   padding: 10px;
@@ -8,7 +8,7 @@
 
 /* ---- Titling Section ---- */
 
-.TitleCard{
+.TitleCard {
   padding-right: 40px;
   display: flex;
   flex-direction: row;
@@ -24,17 +24,17 @@
   border-radius: 10px;
 }
 
-.TitleText{
-  color: #40A2D8;
+.TitleText {
+  color: #40a2d8;
   cursor: pointer;
   text-decoration: none;
   /* Not exactly sure how to center vertically relative to the image... hardcoding the value for now */
   /* TODO Fix this eventually */
-  padding-top: 2.5px; 
+  padding-top: 2.5px;
 }
 
-.TitleText:hover{
-  color:rgb(0, 174, 255);
+.TitleText:hover {
+  color: rgb(0, 174, 255);
   transition: color 0.5s;
   text-decoration: none;
 }
@@ -51,29 +51,100 @@
 
 /* ----Navbar Section ---- */
 
-.NavBar{
+.NavBar {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.NavBar a{
+.NavBar a {
   color: #ffffff;
   font-size: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  
   margin-top: -10px;
   margin-bottom: -10px;
-
   display: flex;
   align-items: center;
-
   text-decoration: none;
 }
 
-.NavBar a:hover{
-  color: #40A2D8;
+.NavBar a:hover {
+  color: #40a2d8;
   background-color: #3a3a3a;
   transition: all 0.5s;
+}
+
+.DropdownMenu {
+  position: relative;
+  display: inline-block;
+}
+
+.DropdownButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 20px;
+  background-image: url(../../../public/img/sidebar.svg);
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+}
+
+.DropdownContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #3b3a3a;
+  min-width: 100vw;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  height: 100vh;
+}
+
+.DropdownContent a {
+  color: #ffffff;
+  padding: 15px;
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  margin: 1px;
+  text-align: center;
+}
+
+.DropdownContent a:hover {
+  background-color: #333;
+}
+
+.show {
+  display: block;
+}
+
+.Hidden {
+  display: none;
+}
+
+.CloseButton {
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 15px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  background-image: url(../../../public/img/close.svg);
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+}
+
+.CloseButton:hover {
+  background-color: #555;
 }
